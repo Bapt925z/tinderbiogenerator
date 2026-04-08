@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Best Tinder Bio Generator (Funny & Attractive 2026)</title>
+
+<meta name="description" content="Generate the best Tinder bio instantly. Funny, attractive and optimized bios to get more matches in 2026.">
+
+<style>
+body {
+  margin:0;
+  font-family: Arial;
+  background: linear-gradient(135deg,#ff4d6d,#ff758f);
+  color:white;
+}
+
+.container {
+  max-width:600px;
+  margin:80px auto;
+  padding:30px;
+  border-radius:25px;
+  background:rgba(255,255,255,0.1);
+  backdrop-filter:blur(15px);
+  text-align:center;
+}
+
+h1 {font-size:32px;}
+
+button {
+  padding:15px;
+  border:none;
+  border-radius:20px;
+  cursor:pointer;
+  background:white;
+  color:#ff4d6d;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+button:hover {
+  transform:scale(1.05);
+}
+
+.result {
+  margin-top:20px;
+  padding:15px;
+  background:rgba(255,255,255,0.2);
+  border-radius:15px;
+}
+
+.footer {
+  margin-top:40px;
+  font-size:12px;
+}
+
+a {color:white; margin:0 10px;}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>Tinder Bio Generator 🔥</h1>
+
+<select id="style">
+<option value="funny">Funny</option>
+<option value="cool">Cool</option>
+<option value="romantic">Romantic</option>
+<option value="bold">Bold</option>
+</select>
+
+<button onclick="generate()">Generate Bio</button>
+
+<div class="result" id="result">Your bio will appear here...</div>
+
+<button onclick="copy()">Copy</button>
+
+</div>
+
+<div class="container">
+<h2>Best Tinder Bios (2026 Guide)</h2>
+<p>
+A good Tinder bio increases your matches significantly. Keep it short, confident and unique.
+Funny bios work best for most users, while bold bios create strong attraction.
+</p>
+</div>
+
+<div class="container footer">
+<a href="privacy.html">Privacy</a>
+<a href="terms.html">Terms</a>
+<a href="contact.html">Contact</a>
+<a href="about.html">About</a>
+</div>
+
+<script>
+const bios = {
+funny:[
+"Swipe right, I promise I'm funnier than your ex.",
+"Fluent in sarcasm and bad decisions.",
+"I bring snacks to emotional breakdowns."
+],
+cool:[
+"Living life one adventure at a time.",
+"Lowkey mysterious, highkey amazing.",
+"I don’t chase, I attract."
+],
+romantic:[
+"Looking for someone to share sunsets with.",
+"Let’s create something unforgettable.",
+"Hopeless romantic with great taste."
+],
+bold:[
+"I’m the best decision you’ll make today.",
+"Handle me or step aside.",
+"I don’t compete, I dominate."
+]
+};
+
+function generate(){
+let style=document.getElementById("style").value;
+let random=bios[style][Math.floor(Math.random()*bios[style].length)];
+document.getElementById("result").innerText=random;
+}
+
+function copy(){
+let text=document.getElementById("result").innerText;
+navigator.clipboard.writeText(text);
+alert("Copied!");
+}
+</script>
+
+</body>
+</html>
